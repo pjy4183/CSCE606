@@ -106,4 +106,11 @@ end
 
 class BookInStock
 # YOUR CODE HERE
+  def initialize(isbn, price)
+    raise ArgumentError.new(
+      "Argument Error\n"
+    ) if isbn.length()==0 || price<=0
+    @isbn = isbn
+    @price = price
+  end
 end
