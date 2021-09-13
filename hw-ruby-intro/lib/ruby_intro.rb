@@ -87,6 +87,19 @@ end
 
 def binary_multiple_of_4? s
   # YOUR CODE HERE
+  if s.length()==0
+    return false;
+  elsif  s =~ /^[0,1]*$/i
+    if s.to_i(2)%4 == 0
+      return true;
+    else
+      return false;
+    end
+  else
+    return false;
+    
+  end
+
 end
 
 # Part 3
