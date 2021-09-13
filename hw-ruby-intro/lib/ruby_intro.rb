@@ -113,4 +113,26 @@ class BookInStock
     @isbn = isbn
     @price = price
   end
+
+  def isbn
+    @isbn
+  end
+
+  def isbn=(isbn)
+    @isbn=isbn
+  end
+
+  def price
+    @price
+  end
+
+  def price=(price)
+    @price=price
+  end
+
+
+  def price_as_string
+    result = "$%0.2f" % [@price]
+    return result
+  end
 end
