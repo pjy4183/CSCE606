@@ -4,13 +4,16 @@
 
 def sum arr
   # YOUR CODE HERE
-  i =0
+  # i =0
   total = 0
-  while i<arr.length()
-    total = total + arr[i]
-    i = i + 1
-  end
+  # while i<arr.length()
+  #   total = total + arr[i]
+  #   i = i + 1
+  # end
   
+  arr.each do |num|
+    total += num
+  end
   return total
 
 end
@@ -48,10 +51,20 @@ end
 
 def sum_to_n? arr, n
   # YOUR CODE HERE
-  if arr.leng()==0 || arr.length()==1
+  if arr.length()==0 || arr.length()==1
     return false
   else
-    
+    i = arr.length() - 1
+    while i>=0
+      remain = n - arr[i]
+      for j in 0..i-1 do
+        if remain == arr[j]
+          return true
+        end
+      end
+      i = i-1
+    end
+    return false
   end
 end
 
@@ -59,10 +72,17 @@ end
 
 def hello(name)
   # YOUR CODE HERE
+  result = "Hello, " << name
+  return result
 end
 
 def starts_with_consonant? s
   # YOUR CODE HERE
+  if s =~ /^[^aeiou\W]/i
+    return true
+  else
+    return false
+  end
 end
 
 def binary_multiple_of_4? s
