@@ -105,7 +105,7 @@ end
 # Part 3
 
 class BookInStock
-# YOUR CODE HERE
+# YOUR CODE HEREs
   def initialize(isbn, price)
     raise ArgumentError.new(
       "Argument Error\n"
